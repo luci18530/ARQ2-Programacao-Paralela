@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <omp.h>
-#include <stdlib.h>
-#include <ctime>
-#include <math.h>
 #include <chrono>
 #include <iostream>
 
@@ -14,10 +9,11 @@ double step;
 using namespace std;
 
 int main () {
-    double a[NUM], b[NUM], c[NUM], d[NUM];
-    int i,j;
+    double a[NUM], b[NUM], c[NUM], d[NUM]; // arrays
+    int i,j; // loop counters
     auto start = std::chrono::high_resolution_clock::now();
 
+    
     for (i=0; i < NUM; i++) {
         a[i] = i * 1.0;
         b[i] = i * 2.0;
@@ -27,7 +23,7 @@ int main () {
 
     for (i=0; i < NUM-2; i++) {
         for (j=0; j < NUM-2; j++) {
-            a[i] = b[i] + c[i] * d[i];
+            a[i] = b[i] + c[i] * d[j];
         }
     }
 
