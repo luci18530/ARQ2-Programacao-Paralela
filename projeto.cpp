@@ -37,5 +37,5 @@ int main () {
 
     float time = duration / 1000000.0;
     // print time 
-    cout << "Time: " << time << " seconds" << endl;
+    cout << "Time: " << time << " segundos" << endl;
 }
